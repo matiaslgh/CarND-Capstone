@@ -85,6 +85,7 @@ class DBWNode(object):
             if not None in (self.current_vel, self.linear_vel, self.angular_vel):
                 self.throttle, self.brake, self.steering = self.controller.control(
                     self.dbw_enabled,
+                    self.current_vel,
                     self.linear_vel,
                     self.angular_vel
                 )
